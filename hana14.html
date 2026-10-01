@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إلى تومتي ♡ | 2/10/2001</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Marhey:wght@400;500;600;700&display=swap');
+
+:root{
+    --navy:#06152f;
+    --blue:#0b2d5c;
+    --blue2:#15549a;
+    --sky:#5ba8e8;
+    --ice:#dff4ff;
+    --white:#f7fbff;
+    --gold:#f5d58a;
+    --paper:#f7f0df;
+    --ink:#17365d;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:
+        radial-gradient(circle at 20% 10%,rgba(91,168,232,.18),transparent 28%),
+        radial-gradient(circle at 80% 35%,rgba(245,213,138,.10),transparent 25%),
+        linear-gradient(180deg,#030c1d 0%,#071a38 35%,#0a2850 72%,#041027 100%);
+    color:var(--white);
+    font-family:'Cairo',sans-serif;
+    overflow-x:hidden;
+}
+
+#stars,
+#hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:white;
+    animation:twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.2;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+.float-heart{
+    position:absolute;
+    color:#8dccff;
+    font-size:20px;
+    animation:floatUp 7s linear infinite;
+    opacity:0;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(20vh) rotate(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.6;
+    }
+
+    85%{
+        opacity:.3;
+    }
+
+    100%{
+        transform:translateY(-115vh) rotate(30deg);
+        opacity:0;
+    }
+}
+
+/* البداية */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:60px 22px;
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+}
+
+.moon{
+    position:absolute;
+    top:9%;
+    left:8%;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#fff5c9;
+    box-shadow:0 0 60px rgba(255,244,188,.35);
+    animation:moonFloat 5s ease-in-out infinite;
+}
+
+.moon:after{
+    content:"";
+    position:absolute;
+    right:-20px;
+    top:-10px;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#06152f;
+}
+
+@keyframes moonFloat{
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+.hero-card{
+    max-width:900px;
+    position:relative;
+    z-index:2;
+}
+
+.eyebrow{
+    letter-spacing:4px;
+    color:#9dd6ff;
+    font-size:14px;
+}
+
+.hero h1{
+    font-family:'Marhey',cursive;
+    font-size:clamp(50px,10vw,105px);
+    line-height:1.05;
+    margin:18px 0;
+    color:white;
+    text-shadow:0 0 30px rgba(110,190,255,.35);
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero-date{
+    font-size:clamp(22px,4vw,36px);
+    color:#d7efff;
+    margin-bottom:18px;
+}
+
+.hero-sub{
+    max-width:650px;
+    margin:auto;
+    color:#b9d5ef;
+    font-size:18px;
+    line-height:2;
+}
+
+.scroll{
+    display:inline-flex;
+    margin-top:35px;
+    border:1px solid #5799d4;
+    border-radius:999px;
+    padding:10px 22px;
+    color:white;
+    text-decoration:none;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        box-shadow:0 0 25px rgba(91,168,232,.25);
+    }
+}
+
+/* الأقسام */
+
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:100px 22px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title .mini{
+    color:#8ccfff;
+}
+
+.section-title h2{
+    font-family:'Marhey';
+    font-size:42px;
+    margin:8px 0;
+}
+
+.section-title p{
+    color:#abc8e3;
+}
+
+/* المشهد */
+
+.scene{
+    height:360px;
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(
+            #06142c 0 62%,
+            #0b3159 62% 100%
+        );
+    border:1px solid rgba(147,211,255,.25);
+    margin-bottom:22px;
+}
+
+.city{
+    position:absolute;
+    bottom:95px;
+    left:0;
+    right:0;
+    height:100px;
+    opacity:.7;
+}
+
+.building{
+    position:absolute;
+    bottom:0;
+    background:#09233f;
+    width:var(--w);
+    height:var(--h);
+    left:var(--x);
+}
+
+.building:after{
+    content:"";
+    position:absolute;
+    inset:15px 8px;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #d8eaff 0 4px,
+            transparent 4px 16px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0 14px,
+            #d8eaff 14px 18px
+        );
+    opacity:.25;
+}
+
+.ground{
+    position:absolute;
+    bottom:0;
+    height:96px;
+    width:100%;
+    background:#08223f;
+}
+
+.person{
+    position:absolute;
+    bottom:73px;
+    width:82px;
+    height:160px;
+    z-index:3;
+    animation:breathe 2.2s ease-in-out infinite;
+}
+
+@keyframes breathe{
+    50%{
+        transform:translateY(-5px);
+    }
+}
+
+.person .head{
+    position:absolute;
+    top:0;
+    left:18px;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:#c98765;
+    border:3px solid #351e1a;
+}
+
+.person .hair{
+    position:absolute;
+    top:-7px;
+    left:13px;
+    width:56px;
+    height:45px;
+    border-radius:50% 50% 42% 42%;
+    background:#17141d;
+}
+
+.person .body{
+    position:absolute;
+    top:44px;
+    left:12px;
+    width:58px;
+    height:78px;
+    border-radius:22px 22px 10px 10px;
+    background:#397eb8;
+}
+
+.person .leg1,
+.person .leg2{
+    position:absolute;
+    top:112px;
+    width:13px;
+    height:55px;
+    background:#1a3152;
+    border-radius:10px;
+}
+
+.person .leg1{
+    left:25px;
+}
+
+.person .leg2{
+    left:48px;
+}
+
+.person .arm{
+    position:absolute;
+    top:58px;
+    width:50px;
+    height:12px;
+    border-radius:12px;
+    background:#c98765;
+}
+
+.person.left{
+    left:29%;
+}
+
+.person.right{
+    right:29%;
+}
+
+.person.left .arm{
+    right:-35px;
+    transform:rotate(18deg);
+    transform-origin:left;
+}
+
+.person.right .arm{
+    left:-35px;
+    transform:rotate(162deg);
+    transform-origin:right;
+}
+
+.hand{
+    position:absolute;
+    bottom:175px;
+    left:50%;
+    width:35px;
+    height:12px;
+    background:#c98765;
+    border-radius:20px;
+    transform:translateX(-50%);
+    z-index:5;
+    box-shadow:0 0 14px rgba(255,213,150,.35);
+}
+
+.caption{
+    position:absolute;
+    top:22px;
+    right:22px;
+    left:22px;
+    text-align:center;
+    z-index:6;
+    font-family:'Marhey';
+    font-size:25px;
+    color:#eef8ff;
+    text-shadow:0 2px 12px #000;
+}
+
+.scene-dots{
+    position:absolute;
+    bottom:15px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:7px;
+    z-index:10;
+}
+
+.scene-dots button{
+    border:0;
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:#679dcc;
+    cursor:pointer;
+}
+
+.scene-dots button.active{
+    background:#f5d58a;
+    transform:scale(1.4);
+}
+
+/* الخط الزمني */
+
+.timeline{
+    position:relative;
+    margin-top:30px;
+}
+
+.timeline:before{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:50%;
+    width:2px;
+    background:linear-gradient(
+        transparent,
+        #559ed7,
+        transparent
+    );
+}
+
+.t-item{
+    width:50%;
+    padding:15px 45px;
+    position:relative;
+}
+
+.t-item:nth-child(odd){
+    margin-right:50%;
+    text-align:left;
+}
+
+.t-item:nth-child(even){
+    margin-right:0;
+    text-align:right;
+}
+
+.t-dot{
+    position:absolute;
+    top:30px;
+    width:14px;
+    height:14px;
+    background:var(--gold);
+    border-radius:50%;
+    box-shadow:0 0 18px #f5d58a;
+}
+
+.t-item:nth-child(odd) .t-dot{
+    right:-7px;
+}
+
+.t-item:nth-child(even) .t-dot{
+    left:-7px;
+}
+
+.t-box{
+    background:rgba(8,36,72,.75);
+    border:1px solid rgba(129,195,239,.18);
+    padding:22px;
+    border-radius:20px;
+}
+
+.t-box b{
+    color:#f5d58a;
+}
+
+.t-box p{
+    color:#b8d3eb;
+    line-height:1.9;
+    margin-bottom:0;
+}
+
+/* الصور - 4 صور */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    max-width:850px;
+    margin:auto;
+}
+
+.photo{
+    position:relative;
+    width:100%;
+    aspect-ratio:1 / 1;
+    overflow:hidden;
+    border-radius:24px;
+    padding:8px;
+    background:
+        linear-gradient(
+            145deg,
+            #dceeff,
+            #6da9d8
+        );
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35),
+        0 0 0 1px rgba(255,255,255,.15);
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+}
+
+.photo:before{
+    content:"";
+    position:absolute;
+    inset:8px;
+    border:1px solid rgba(255,255,255,.55);
+    border-radius:18px;
+    z-index:2;
+    pointer-events:none;
+}
+
+.photo:hover{
+    transform:
+        translateY(-10px)
+        rotate(-1deg)
+        scale(1.015);
+    box-shadow:
+        0 30px 65px rgba(0,0,0,.45),
+        0 0 30px rgba(91,168,232,.2);
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+@media(max-width:600px){
+
+    .gallery{
+        grid-template-columns:1fr;
+        gap:20px;
+        max-width:500px;
+    }
+
+    .photo{
+        aspect-ratio:4 / 3;
+    }
+}
+
+/* الرسالة */
+
+.letter-wrap{
+    display:flex;
+    justify-content:center;
+}
+
+.letter{
+    max-width:800px;
+    background:var(--paper);
+    color:var(--ink);
+    padding:48px 45px;
+    border-radius:8px;
+    position:relative;
+    box-shadow:0 25px 80px rgba(0,0,0,.35);
+    transform:rotate(-.4deg);
+}
+
+.letter:before,
+.letter:after{
+    content:"";
+    position:absolute;
+    width:70px;
+    height:70px;
+    border:2px solid rgba(23,54,93,.08);
+}
+
+.letter:before{
+    top:18px;
+    left:18px;
+    border-right:0;
+    border-bottom:0;
+}
+
+.letter:after{
+    bottom:18px;
+    right:18px;
+    border-left:0;
+    border-top:0;
+}
+
+.letter h3{
+    font-family:'Marhey';
+    font-size:32px;
+    margin-top:0;
+}
+
+.letter p{
+    line-height:2.25;
+    font-size:18px;
+    white-space:pre-line;
+}
+
+.signature{
+    text-align:left;
+    font-family:'Marhey';
+    font-size:22px;
+    margin-top:30px;
+}
+
+/* النهاية */
+
+.final{
+    text-align:center;
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:80px 20px;
+    background:
+        radial-gradient(
+            circle at 50% 65%,
+            rgba(81,159,221,.16),
+            transparent 30%
+        );
+}
+
+.cake{
+    font-size:100px;
+    filter:drop-shadow(
+        0 0 25px rgba(245,213,138,.3)
+    );
+    animation:cake 2s ease-in-out infinite;
+}
+
+@keyframes cake{
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.final h2{
+    font-family:'Marhey';
+    font-size:clamp(35px,7vw,70px);
+    margin:15px 0;
+}
+
+.final p{
+    color:#b9d6ed;
+    font-size:19px;
+}
+
+.btn{
+    border:1px solid #6eb6eb;
+    background:rgba(30,94,153,.25);
+    color:white;
+    padding:13px 24px;
+    border-radius:999px;
+    font-family:inherit;
+    cursor:pointer;
+    font-size:16px;
+    margin:8px;
+}
+
+.btn:hover{
+    background:#174d80;
+}
+
+footer{
+    text-align:center;
+    color:#7599bb;
+    padding:25px;
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:1s;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:none;
+}
+
+#confetti{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:50;
+}
+</style>
+</head>
+
+<body>
+
+<div id="stars"></div>
+<div id="hearts"></div>
+<canvas id="confetti"></canvas>
+
+
+<!-- البداية -->
+
+<header class="hero">
+
+    <div class="moon"></div>
+
+    <div class="hero-card reveal">
+
+        <div class="eyebrow">
+            A STORY THAT STARTED ON THE SAME DAY ♡
+        </div>
+
+        <h1>
+            أنا و <span>هناء</span>
+        </h1>
+
+        <div class="hero-date">
+            02 / 10 / 2001
+        </div>
+
+        <p class="hero-sub">
+            يوم واحد جمع ميلادنا…
+            وبعدها الأيام قررت تعمل من الحكاية دي
+            عمر كامل من الضحكات والذكريات والطفولة والجنون.
+        </p>
+
+        <a class="scroll" href="#story">
+            انزلي شوفي حكايتنا ↓
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- قصة الميلاد -->
+
+<section class="section" id="story">
+
+    <div class="section-title reveal">
+
+        <div class="mini">
+            OUR LITTLE UNIVERSE
+        </div>
+
+        <h2>
+            حكايتنا بدأت من أول يوم ✦
+        </h2>
+
+        <p>
+            اضغطي على المشاهد وشوفي الحكاية تتحرك قدامك.
+        </p>
+
+    </div>
+
+
+    <!-- المشهد المتحرك -->
+
+    <div class="scene reveal" id="scene">
+
+        <div class="caption" id="sceneCaption">
+            في يوم واحد… اتولدت حكايتين ♡
+        </div>
+
+        <div
+            class="moon"
+            style="
+            top:35px;
+            left:70%;
+            width:55px;
+            height:55px;
+            "
+        ></div>
+
+        <div class="city">
+
+            <i
+                class="building"
+                style="--x:3%;--w:9%;--h:70px"
+            ></i>
+
+            <i
+                class="building"
+                style="--x:14%;--w:13%;--h:105px"
+            ></i>
+
+            <i
+                class="building"
+                style="--x:30%;--w:8%;--h:80px"
+            ></i>
+
+            <i
+                class="building"
+                style="--x:43%;--w:14%;--h:120px"
+            ></i>
+
+            <i
+                class="building"
+                style="--x:61%;--w:10%;--h:88px"
+            ></i>
+
+            <i
+                class="building"
+                style="--x:75%;--w:15%;--h:115px"
+            ></i>
+
+            <i
+                class="building"
+                style="--x:92%;--w:7%;--h:75px"
+            ></i>
+
+        </div>
+
+        <div class="ground"></div>
+
+
+        <div class="person left" id="girl1">
+
+            <div class="head"></div>
+            <div class="hair"></div>
+            <div class="body"></div>
+            <div class="leg1"></div>
+            <div class="leg2"></div>
+            <div class="arm"></div>
+
+        </div>
+
+
+        <div class="person right" id="girl2">
+
+            <div class="head"></div>
+            <div class="hair"></div>
+
+            <div
+                class="body"
+                style="background:#d77a96"
+            ></div>
+
+            <div class="leg1"></div>
+            <div class="leg2"></div>
+            <div class="arm"></div>
+
+        </div>
+
+
+        <div class="hand" id="hand"></div>
+
+
+        <div class="scene-dots">
+
+            <button
+                class="active"
+                onclick="scene(0)"
+            ></button>
+
+            <button
+                onclick="scene(1)"
+            ></button>
+
+            <button
+                onclick="scene(2)"
+            ></button>
+
+            <button
+                onclick="scene(3)"
+            ></button>
+
+        </div>
+
+    </div>
+
+
+    <div class="story">
+
+        <article class="story-card reveal">
+
+            <div class="story-content">
+
+                <div class="story-icon">
+                    👶🏻💙
+                </div>
+
+                <h3>
+                    02 أكتوبر 2001
+                </h3>
+
+                <p>
+                    في نفس اليوم، وفي نفس العالم،
+                    بدأت قصتين صغيرتين.
+                    ما كنا نعرف وقتها إن الأيام مخبية لينا واحدة من أجمل الصدف:
+                    إننا نكبر سوا ونفضل ماسكين يدين بعض حتى بعد ما نكبر.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="story-card reveal">
+
+            <div class="story-content">
+
+                <div class="story-icon">
+                    🤝🏻✨
+                </div>
+
+                <h3>
+                    من أطفال… إلى نحن
+                </h3>
+
+                <p>
+                    لعب، مدارس، ضحك، زعل، أسرار،
+                    صور ما بتتنسى…
+                    وكل مرحلة كانت بتضيف صفحة جديدة في كتابنا.
+                    الزمن اتغير، لكن الحكاية ما اتغيرت.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- الخط الزمني -->
+
+<section class="section">
+
+    <div class="section-title reveal">
+
+        <div class="mini">
+            OUR TIMELINE
+        </div>
+
+        <h2>
+            من يدين صغيرات… لقلوب كبيرة ♡
+        </h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="t-item reveal">
+
+            <div class="t-dot"></div>
+
+            <div class="t-box">
+
+                <b>
+                    2001 · البداية
+                </b>
+
+                <p>
+                    يوم 2/10…
+                    أول صفحة في حكايتنا.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="t-item reveal">
+
+            <div class="t-dot"></div>
+
+            <div class="t-box">
+
+                <b>
+                    الطفولة · سوا
+                </b>
+
+                <p>
+                    أيام اللعب والضحكات،
+                    ويدين صغيرات ما عارفين إنهم ماسكين
+                    في صداقة هتطول.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="t-item reveal">
+
+            <div class="t-dot"></div>
+
+            <div class="t-box">
+
+                <b>
+                    كبرنا · لكن ما اتغيرنا
+                </b>
+
+                <p>
+                    كبرنا، اتغيرت تفاصيل كتيرة،
+                    لكن وجودك ظل جزء ثابت من حكايتي.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="t-item reveal">
+
+            <div class="t-dot"></div>
+
+            <div class="t-box">
+
+                <b>
+                    اليوم · نحن
+                </b>
+
+                <p>
+                    لسه بنجمع الذكريات،
+                    ولسه في صفحات كتيرة ما كتبناها.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- الصور الأربعة -->
+
+<section class="section" id="photos">
+
+    <div class="section-title reveal">
+
+        <div class="mini">
+            OUR MEMORIES
+        </div>
+
+        <h2>
+            صورنا… حكايتنا 📸
+        </h2>
+
+    </div>
+
+
+    <div class="gallery">
+
+
+        <div class="photo reveal">
+
+            <img
+                src="IMG_1377.HEIC"
+                alt="صورتنا الأولى"
+            >
+
+        </div>
+
+
+        <div class="photo reveal">
+
+            <img
+                src="IMG_1947.jpg"
+                alt="صورتنا الثانية"
+            >
+
+        </div>
+
+
+        <div class="photo reveal">
+
+            <img
+                src="IMG_1948.jpg"
+                alt="صورتنا الثالثة"
+            >
+
+        </div>
+
+
+        <div class="photo reveal">
+
+            <img
+                src="IMG_1949.jpg"
+                alt="صورتنا الرابعة"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- الرسالة -->
+
+<section class="section" id="letter">
+
+    <div class="section-title reveal">
+
+        <div class="mini">
+            A LETTER FOR TOMTY
+        </div>
+
+        <h2>
+            رسالة ما بتشبه أي رسالة 💌
+        </h2>
+
+    </div>
+
+
+    <div class="letter-wrap">
+
+        <div class="letter reveal">
+
+            <h3>
+                إلى تومتي… ♡
+            </h3>
+
+            <p>
+في يوم 2/10/2001 ما كنت عارفة إن اليوم ده حيكون بداية واحدة من أجمل الحاجات في حياتي.
+
+إنتِ ما مجرد شخص كبر معاي…
+إنتِ جزء من طفولتي، من ذاكرتي، من الضحكات البتجي في بالي بدون سبب، ومن كل مرحلة عدّت علينا.
+
+لو الزمن رجّعنا أطفال تاني، أتمنى ألقى يدك في يدي بنفس الطريقة…
+بدون ما نعرف المستقبل، وبدون ما نعرف إننا بنكتب حكاية حتفضل معانا سنين طويلة.
+
+كبرنا، واتغيرت حاجات كتيرة…
+لكن في حاجة واحدة ما اتغيرت:
+إنك جزء من حكايتي.
+
+كل سنة وإنتِ تومتي.
+كل سنة وإنتِ الشخص البخلي ذكرياتي أجمل لمجرد إنك كنتِ فيها.
+
+وأتمنى مهما كبرنا، ومهما اتغيرت الدنيا حوالينا،
+نفضل نحن…
+بنفس القلب، بنفس الضحكة، وبنفس الحكاية.
+
+Happy Birthday to the girl who was born on the same day as me.
+
+02 / 10 / 2001 — our beginning. ♡
+            </p>
+
+            <div class="signature">
+
+                بحبك يا تومتي ♡
+                <br>
+                — هديل
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- النهاية -->
+
+<section class="final">
+
+    <div class="reveal">
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <h2>
+            كل سنة ونحن سوا 💙
+        </h2>
+
+        <p>
+            02 / 10 / 2001 → forever & ever
+        </p>
+
+        <button
+            class="btn"
+            onclick="celebrate()"
+        >
+            اضغطي هنا… عندي مفاجأة ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made with love for Tomty · 02.10.2001 ♡
+
+</footer>
+
+
+<script>
+
+/* النجوم */
+
+const stars =
+    document.getElementById("stars");
+
+for(let i=0;i<95;i++){
+
+    const s =
+        document.createElement("i");
+
+    s.className="star";
+
+    s.style.left =
+        Math.random()*100+"%";
+
+    s.style.top =
+        Math.random()*100+"%";
+
+    s.style.animationDelay =
+        Math.random()*3+"s";
+
+    s.style.opacity =
+        .2+Math.random()*.7;
+
+    stars.appendChild(s);
+}
+
+
+/* القلوب */
+
+const hearts =
+    document.getElementById("hearts");
+
+for(let i=0;i<18;i++){
+
+    const h =
+        document.createElement("div");
+
+    h.className="float-heart";
+
+    h.textContent =
+        ["♡","♥️","✦"][
+            Math.floor(Math.random()*3)
+        ];
+
+    h.style.left =
+        Math.random()*100+"%";
+
+    h.style.animationDelay =
+        Math.random()*8+"s";
+
+    h.style.fontSize =
+        12+Math.random()*18+"px";
+
+    hearts.appendChild(h);
+}
+
+
+/* مشاهد القصة */
+
+const captions=[
+
+    "في يوم واحد… اتولدت حكايتين ♡",
+
+    "أطفال… وماسكين يدين بعض من غير ما نعرف الحكاية حتطول كيف 🤝🏻",
+
+    "كبرنا… لكن الذكريات لسه ماسكة فينا ✨",
+
+    "واليوم… لسه يدك في يدي، بس الحكاية بقت أجمل 💙"
+
+];
+
+
+const girl1 =
+    document.getElementById("girl1");
+
+const girl2 =
+    document.getElementById("girl2");
+
+const hand =
+    document.getElementById("hand");
+
+
+function scene(n){
+
+    document.getElementById(
+        "sceneCaption"
+    ).textContent =
+        captions[n];
+
+
+    const buttons =
+        document.querySelectorAll(
+            ".scene-dots button"
+        );
+
+
+    buttons.forEach((b,i)=>{
+
+        b.classList.toggle(
+            "active",
+            i===n
+        );
+
+    });
+
+
+    if(n===0){
+
+        girl1.style.transform =
+            "scale(.35) translateX(-40px)";
+
+        girl2.style.transform =
+            "scale(.35) translateX(40px)";
+
+        hand.style.opacity=0;
+
+    }
+
+    else if(n===1){
+
+        girl1.style.transform =
+            "scale(.72)";
+
+        girl2.style.transform =
+            "scale(.72)";
+
+        hand.style.opacity=1;
+
+    }
+
+    else if(n===2){
+
+        girl1.style.transform =
+            "scale(.95)";
+
+        girl2.style.transform =
+            "scale(.95)";
+
+        hand.style.opacity=1;
+
+    }
+
+    else{
+
+        girl1.style.transform =
+            "scale(1)";
+
+        girl2.style.transform =
+            "scale(1)";
+
+        hand.style.opacity=1;
+
+    }
+
+}
+
+
+/* تغيير المشهد تلقائياً */
+
+setInterval(()=>{
+
+    let current =
+        [...document.querySelectorAll(
+            ".scene-dots button"
+        )]
+        .findIndex(
+            x =>
+            x.classList.contains("active")
+        );
+
+    scene((current+1)%4);
+
+},5000);
+
+
+/* ظهور العناصر */
+
+const observer =
+    new IntersectionObserver(
+        entries=>{
+
+            entries.forEach(e=>{
+
+                if(e.isIntersecting){
+
+                    e.target.classList.add(
+                        "show"
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold:.12
+        }
+    );
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(
+        x=>observer.observe(x)
+    );
+
+
+/* الكونفيتي */
+
+const canvas =
+    document.getElementById(
+        "confetti"
+    );
+
+const ctx =
+    canvas.getContext("2d");
+
+let pieces=[];
+
+
+function resize(){
+
+    canvas.width=
+        innerWidth;
+
+    canvas.height=
+        innerHeight;
+
+}
+
+resize();
+
+addEventListener(
+    "resize",
+    resize
+);
+
+
+function celebrate(){
+
+    pieces=[];
+
+
+    for(let i=0;i<180;i++){
+
+        pieces.push({
+
+            x:innerWidth/2,
+
+            y:innerHeight*.45,
+
+            vx:(Math.random()-.5)*12,
+
+            vy:-Math.random()*12-4,
+
+            s:4+Math.random()*7,
+
+            r:Math.random()*6
+
+        });
+
+    }
+
+
+    requestAnimationFrame(draw);
+
+}
+
+
+function draw(){
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+
+    pieces.forEach(p=>{
+
+        p.x+=p.vx;
+
+        p.y+=p.vy;
+
+        p.vy+=.25;
+
+        p.r+=.1;
+
+
+        ctx.save();
+
+        ctx.translate(
+            p.x,
+            p.y
+        );
+
+        ctx.rotate(p.r);
+
+
+        ctx.fillStyle=
+            [
+                "#75c8ff",
+                "#f5d58a",
+                "#ffffff",
+                "#4d91d1"
+            ][
+                Math.floor(
+                    Math.random()*4
+                )
+            ];
+
+
+        ctx.fillRect(
+            -p.s/2,
+            -p.s/2,
+            p.s,
+            p.s
+        );
+
+
+        ctx.restore();
+
+    });
+
+
+    pieces=
+        pieces.filter(
+            p=>p.y<innerHeight+30
+        );
+
+
+    if(pieces.length){
+
+        requestAnimationFrame(draw);
+
+    }
+
+    else{
+
+        ctx.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
